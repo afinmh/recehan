@@ -1,0 +1,155 @@
+DESKRIPSI DATASET
+
+1. Dataset Produksi Padi (data1_padi.csv)
+- Provinsi: Nama provinsi di Indonesia
+- Tahun: Tahun data (1993-2020)
+- Produksi: Jumlah produksi padi (dalam ton)
+- Luas Panen: Luas area panen (dalam hektar)
+- Curah hujan: Tingkat curah hujan (dalam mm)
+- Kelembapan: Tingkat kelembapan udara (dalam %)
+- Suhu rata-rata: Suhu rata-rata (dalam °C)
+
+2. Dataset Iris (data2_iris.csv)
+- Id: Nomor identifikasi
+- SepalLengthCm: Panjang sepal dalam sentimeter
+- SepalWidthCm: Lebar sepal dalam sentimeter
+- PetalLengthCm: Panjang petal dalam sentimeter
+- PetalWidthCm: Lebar petal dalam sentimeter
+- Species: Jenis bunga iris (Iris-setosa, Iris-versicolor, Iris-virginica)
+
+3. Dataset Asuransi Kesehatan (data3_asuransi.csv)
+- age: Usia pemegang polis
+- sex: Jenis kelamin (male/female)
+- bmi: Body Mass Index (Indeks Massa Tubuh)
+- children: Jumlah anak yang ditanggung
+- smoker: Status perokok (yes/no)
+- region: Wilayah di AS (southwest, southeast, northwest, northeast)
+- charges: Biaya asuransi kesehatan (dalam USD)
+
+4. Dataset Indikator Negara (data4_negara.csv)
+- country: Nama negara
+- child_mort: Tingkat kematian anak (per 1000 kelahiran)
+- exports: Ekspor (% dari GDP)
+- health: Pengeluaran kesehatan (% dari GDP)
+- imports: Impor (% dari GDP)
+- income: Pendapatan per kapita
+- inflation: Tingkat inflasi (%)
+- life_expec: Harapan hidup (tahun)
+- total_fer: Tingkat fertilitas total (anak per wanita)
+- gdpp: GDP per kapita (USD)
+
+5. Dataset Transaksi Toko (data5_toko.csv)
+Dataset ini berisi informasi transaksi penjualan di sebuah toko retail. Data mencakup detail transaksi harian dengan fokus pada item yang dibeli.
+
+Variabel dalam dataset:
+- Member_number: Nomor identifikasi anggota/pelanggan
+- Date: Tanggal transaksi (format DD-MM-YYYY)
+- itemDescription: Deskripsi item yang dibeli
+
+Karakteristik dataset:
+- Jumlah Data: 38,767 transaksi
+- Periode Data: 2015
+- Jumlah Unik Pelanggan: Berdasarkan Member_number
+- Jenis Item: Berbagai kategori produk retail (makanan, minuman, dll)
+
+ANALISIS TEKNIK PEMBELAJARAN
+
+1. Dataset Produksi Padi (data1_padi.csv)
+Teknik: Supervised Learning
+Alasan: 
+- Dapat digunakan untuk prediksi produksi padi (variabel target) berdasarkan variabel input seperti curah hujan, kelembapan, dan suhu
+- Cocok untuk analisis regresi karena variabel target (Produksi) bersifat kontinu
+- Data historis dapat digunakan untuk mempelajari pola dan memprediksi produksi masa depan
+
+2. Dataset Iris (data2_iris.csv)
+Teknik: Supervised Learning
+Alasan:
+- Dataset klasik untuk klasifikasi dengan label kelas yang jelas (Species)
+- Memiliki fitur-fitur terukur (panjang dan lebar sepal/petal) sebagai input
+- Tujuannya adalah memprediksi jenis bunga iris berdasarkan karakteristik fisiknya
+
+3. Dataset Asuransi Kesehatan (data3_asuransi.csv)
+Teknik: Supervised Learning
+Alasan:
+- Dapat digunakan untuk memprediksi biaya asuransi (charges) sebagai variabel target
+- Memiliki berbagai fitur prediktor seperti usia, BMI, status perokok, dll
+- Cocok untuk analisis regresi karena memprediksi nilai numerik (biaya)
+
+4. Dataset Indikator Negara (data4_negara.csv)
+Teknik: Unsupervised Learning & Supervised Learning
+Alasan:
+- Unsupervised Learning:
+  * Dapat digunakan untuk clustering negara berdasarkan karakteristik ekonomi dan sosialnya
+  * Membantu menemukan pola dan kelompok negara dengan karakteristik serupa
+  * Berguna untuk analisis eksploratori data
+- Supervised Learning:
+  * Dapat juga digunakan untuk memprediksi indikator tertentu (misal: GDP) berdasarkan indikator lainnya
+  * Analisis regresi untuk memahami hubungan antar variabel
+
+5. Dataset Transaksi Toko (data5_toko.csv)
+Teknik: Unsupervised Learning & Supervised Learning
+Alasan:
+- Unsupervised Learning:
+  * Dapat digunakan untuk analisis market basket (association rules)
+  * Membantu menemukan pola pembelian yang sering terjadi bersama
+  * Berguna untuk rekomendasi produk dan strategi penempatan produk
+- Supervised Learning:
+  * Dapat digunakan untuk memprediksi pola pembelian berdasarkan riwayat
+  * Analisis time series untuk peramalan penjualan
+  * Klasifikasi preferensi pelanggan
+
+STATISTIK DESKRIPTIF
+
+1. Dataset Produksi Padi (data1_padi.csv)
+- Jumlah Data: 226 baris
+- Periode: 1993-2020
+- Jumlah Provinsi: 8 provinsi (Aceh, Sumatera Utara, Sumatera Barat, Riau, Jambi, Sumatera Selatan, Bengkulu, Lampung)
+- Variabel Numerik:
+  * Produksi: Rata-rata sekitar 1.5 juta ton per provinsi
+  * Luas Panen: Rata-rata sekitar 300.000 hektar per provinsi
+  * Curah Hujan: Beragam antara 500-5000 mm
+  * Kelembapan: Rata-rata sekitar 80%
+  * Suhu: Rata-rata sekitar 26-27°C
+
+2. Dataset Iris (data2_iris.csv)
+- Jumlah Data: 150 baris
+- Jumlah Kelas: 3 (Iris-setosa, Iris-versicolor, Iris-virginica)
+- Variabel Numerik:
+  * SepalLengthCm: Rata-rata sekitar 5.8 cm
+  * SepalWidthCm: Rata-rata sekitar 3.0 cm
+  * PetalLengthCm: Rata-rata sekitar 3.7 cm
+  * PetalWidthCm: Rata-rata sekitar 1.2 cm
+- Distribusi Kelas: Seimbang (50 sampel per kelas)
+
+3. Dataset Asuransi Kesehatan (data3_asuransi.csv)
+- Jumlah Data: 2773 baris
+- Variabel Kategorikal:
+  * sex: 2 kategori (male/female)
+  * smoker: 2 kategori (yes/no)
+  * region: 4 kategori (southwest, southeast, northwest, northeast)
+- Variabel Numerik:
+  * age: Rentang 18-64 tahun
+  * bmi: Rata-rata sekitar 30
+  * children: 0-5 anak
+  * charges: Biaya bervariasi dari ribuan hingga puluhan ribu USD
+
+4. Dataset Indikator Negara (data4_negara.csv)
+- Jumlah Data: 169 negara
+- Variabel Numerik:
+  * child_mort: 2.6-208 per 1000 kelahiran
+  * exports: 0.1-200% dari GDP
+  * health: 1.8-17.9% dari GDP
+  * income: $327-$125,000 per kapita
+  * inflation: -4.21% hingga 104%
+  * life_expec: 32.1-82.8 tahun
+  * total_fer: 1.15-7.49 anak per wanita
+  * gdpp: $231-$105,000 per kapita
+
+5. Dataset Transaksi Toko (data5_toko.csv)
+- Jumlah Data: 38,767 transaksi
+- Periode: Tahun 2015
+- Variabel Kategorikal:
+  * itemDescription: Berbagai jenis produk retail
+  * Member_number: Identifikasi unik pelanggan
+- Variabel Temporal:
+  * Date: Transaksi harian sepanjang tahun 2015 
