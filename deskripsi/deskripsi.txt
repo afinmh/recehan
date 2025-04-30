@@ -13,7 +13,7 @@ DESKRIPSI DATASET
 - Id: Nomor identifikasi
 - SepalLengthCm: Panjang sepal dalam sentimeter
 - SepalWidthCm: Lebar sepal dalam sentimeter
-- PetalLengthCm: Panjang petal dalam sentimeter
+- PetalLengthCm: Panjang petal dalam sentimeter (mahkota)
 - PetalWidthCm: Lebar petal dalam sentimeter
 - Species: Jenis bunga iris (Iris-setosa, Iris-versicolor, Iris-virginica)
 

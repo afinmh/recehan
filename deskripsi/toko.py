@@ -18,11 +18,3 @@ print(df.describe())
 
 print("\n5. Statistik Deskriptif (Kategorikal):")
 print(df.describe(exclude=np.number))
-
-print("\n6. Jumlah Unik untuk Setiap Kolom:")
-print("\nMember_number unik:", df['Member_number'].nunique())
-print("Tanggal unik:", df['Date'].nunique())
-print("Produk unik:", df['itemDescription'].nunique())
-
-print("\n7. Top 5 Produk Terlaris:")
-print(df['itemDescription'].value_counts().head()) 
