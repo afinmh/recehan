@@ -14,9 +14,9 @@ x_train_cnn = x_train.astype("float32") / 255.0
 x_test_cnn = x_test.astype("float32") / 255.0
 
 # Ubah ukuran gambar ke 96x96 untuk MobileNetV2 (karena MobileNetV2 memerlukan gambar lebih besar)
-x_train_mnet = tf.image.resize(x_train[..., np.newaxis], (96, 96))  # Ubah ke dimensi (28, 28, 1) menjadi (28, 28, 3)
+x_train_mnet = tf.image.resize(x_train[..., np.newaxis], (96, 96)) 
 x_test_mnet = tf.image.resize(x_test[..., np.newaxis], (96, 96))
-x_train_mnet = tf.repeat(x_train_mnet, 3, axis=-1)  # Mengulangi saluran warna (grayscale ke RGB)
+x_train_mnet = tf.repeat(x_train_mnet, 3, axis=-1)
 x_test_mnet = tf.repeat(x_test_mnet, 3, axis=-1)
 x_train_mnet = preprocess_input(x_train_mnet)
 x_test_mnet = preprocess_input(x_test_mnet)
@@ -25,7 +25,7 @@ x_test_mnet = preprocess_input(x_test_mnet)
 y_train_cat = tf.keras.utils.to_categorical(y_train, num_classes)
 y_test_cat = tf.keras.utils.to_categorical(y_test, num_classes)
 
-# CNN Sederhana
+# CNN
 def build_cnn():
     model = models.Sequential([
         layers.Conv2D(64, (3, 3), activation='relu', input_shape=(28, 28, 1)),
